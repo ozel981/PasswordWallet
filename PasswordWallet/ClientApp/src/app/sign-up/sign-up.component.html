@@ -1,0 +1,13 @@
+<h2>Sign up</h2>
+<div>
+    <label for="login">User login: </label>
+    <input id="login" [(ngModel)]="createUserCommand.login" placeholder="login">
+    <br>
+    <label for="password">User password: </label>
+    <input id="password" [(ngModel)]="createUserCommand.password" placeholder="password">
+    <br>
+    <label for="IsPasswordKeptAsHash">Is password hash by SHA512?</label>
+    <input type="checkbox" [(ngModel)]="createUserCommand.isPasswordKeptAsHash" />
+    <br>
+    <button type="button" (click)="signup()">Sign up</button>
+</div>

@@ -1,0 +1,15 @@
+<h2>Sign in</h2>
+<div>
+    <label for="login">User login: </label>
+    <input id="login" [(ngModel)]="user.login" placeholder="login">
+    <br>
+    <label for="password">User password: </label>
+    <input id="password" [(ngModel)]="user.password" placeholder="password">
+    <br>
+    <button type="button" (click)="signin()">Sign in</button>
+    <br>
+    <br>
+    <label *ngIf="errorResponse !== undefined" id="error">{{errorResponse.error.errors[0].message}}</label>
+    <br>
+    If you don't have an account yet, <a routerLink="/sign-up">sign up</a>.
+</div>

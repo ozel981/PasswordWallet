@@ -1,0 +1,19 @@
+<span>Hello {{user.login}}</span>
+<br>
+<a [routerLink]="['/change-password',{login:user.login}]">Change password</a>
+<br>
+<a routerLink="/sign-in">Log out</a>
+<br><br>
+Last login time: {{user.lastSigninDateTime}} <br>
+Last login was {{user.wasSuccessfulSignin ? 'Success' : 'Failure' }} <br>
+Last login session: {{ user.sessionKey }} <br>
+Last login ipAddress: {{ user.addressIP }} <br>
+<br><br>
+<div class="row">
+    <div class="column">
+        <password-wallet [login]="user.login"></password-wallet>
+    </div>
+    <div class="column">
+        <shared-password-wallet [login]="user.login"></shared-password-wallet>
+    </div>
+</div>
